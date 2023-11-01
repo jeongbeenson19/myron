@@ -1,0 +1,105 @@
+/* 기본 스타일링 */
+body {
+  overflow: auto;
+}
+
+#root {
+  background-color: #001e2d;
+  height: 100%;
+  font-size: 14px;
+}
+
+.horizontal {
+  flex-direction: row;
+}
+
+.vertical {
+  display: flex;
+  flex-direction: column;
+}
+
+.expand {
+  flex: 1 1;
+}
+
+/* 비디오 컬럼 스타일 */
+
+.video-column {
+ width: 400px;
+ flex-shrink: 0;
+}
+
+.button-load-video-wrapper {
+  background-color: hsla(0, 0%,100%,.1);
+  cursor: pointer;
+  position: relative;
+  height: 36px;
+  border-bottom: 1px solid hsla(0, 0%,100%,.1);
+}
+
+.button-load-video {
+  color: #ffc900;
+  line-height: 36px;
+  justify-content: center;
+}
+
+.video-timer-wrapper {
+  margin-top: 4px;
+  padding: 4px;
+  background-color: hsla(0, 0%,100%,.1);
+}
+.video-timer {
+  background-color: #001e2d;
+}
+
+.video-player {
+  white-space: nowrap;
+}
+
+.toolbar {
+  background-color: #000;
+  justify-content: flex-end;
+  padding: 2px 4px
+}
+
+.video-wrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  background-color: #000;
+}
+
+.event-area {
+  width: 100%;
+  flex: 1 1;
+  display: block;
+  overflow-y: auto;
+}
+
+.button-myron {
+  margin-left: 4px;
+  padding: 0 4px;
+  cursor: pointer;
+  background-color: initial;
+  color: #00d2ff;
+  border: 1px solid #00d2ff;
+  border-radius: 4px;
+}
+
+.button-myron input[type="file"] {
+  display: none;
+}
+
+/* 분석 컬럼 스타일 */
+.analysis-column {
+  position: relative;
+}
+
+.app-toolbar {
+  height: 36px;
+  align-items: center;
+  padding: 0 2px;
+  border-bottom: 1px solid hsla(0, 0%,100%,.1);
+}
+
+/* 다른 스타일 요소를 추가할 수 있습니다. */
