@@ -1,55 +1,60 @@
-/* 기본 스타일링 */
-body {
-  overflow: auto;
-}
-
-#root {
-  background-color: #001e2d;
-  height: 100%;
-  font-size: 14px;
-}
-
 .horizontal {
   flex-direction: row;
 }
 
-.vertical {
-  display: flex;
-  flex-direction: column;
+.custom-bg {
+  background-color: #001e2d;
+  font-size: 14px;
 }
 
-.expand {
-  flex: 1 1;
-}
-
-/* 비디오 컬럼 스타일 */
-
-.video-column {
- width: 400px;
- flex-shrink: 0;
-}
+/* video-cloumn */
 
 .button-load-video-wrapper {
-  background-color: hsla(0, 0%,100%,.1);
+  background-color: hsla(0,0%,100%,.1);
   cursor: pointer;
   position: relative;
   height: 36px;
-  border-bottom: 1px solid hsla(0, 0%,100%,.1);
+  border-bottom: 1px solid hsla(0,0%,100%,.1);
 }
 
 .button-load-video {
-  color: #ffc900;
-  line-height: 36px;
-  justify-content: center;
+ color: #ffc900;
+ line-height: 36px;
+ text-align: center;
 }
 
 .video-timer-wrapper {
   margin-top: 4px;
   padding: 4px;
-  background-color: hsla(0, 0%,100%,.1);
+  background-color: hsla(0,0%,100%,.1);
 }
+
 .video-timer {
   background-color: #001e2d;
+  position: relative;
+  padding-left: 10px;
+  width: 100%;
+  cursor: pointer;
+  height: 40px;
+  line-height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 4px;
+  color: #ffc900;
+}
+
+video-timer.list div {
+  font-size: .9rem;
+} 
+
+.button-set-video-time {
+  width: 40px;
+  height: 40px;
+  border: none;
+  color: #00d2ff;
+  background-color: initial;
+  text-align: center;
 }
 
 .video-player {
@@ -59,21 +64,7 @@ body {
 .toolbar {
   background-color: #000;
   justify-content: flex-end;
-  padding: 2px 4px
-}
-
-.video-wrapper {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  background-color: #000;
-}
-
-.event-area {
-  width: 100%;
-  flex: 1 1;
-  display: block;
-  overflow-y: auto;
+  padding: 2px 4px;
 }
 
 .button-myron {
@@ -86,20 +77,71 @@ body {
   border-radius: 4px;
 }
 
-.button-myron input[type="file"] {
-  display: none;
-}
-
-/* 분석 컬럼 스타일 */
-.analysis-column {
+.video-wrapper {
   position: relative;
+  overflow: hidden;
+  width: 100%;
+  background-color: #000;
 }
 
-.app-toolbar {
-  height: 36px;
+.video-controls {
+  opacity: 0;
+  transition: opacity .2s;
+  transition-delay: 1s;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
   align-items: center;
-  padding: 0 2px;
-  border-bottom: 1px solid hsla(0, 0%,100%,.1);
+  background-color: #fefefe;
+}
+
+.bar-wrapper {
+  align-self: stretch;
+  align-items: stretch;
+  cursor: pointer;
+  justify-content: center;
+}
+
+.bar {
+  height: 4px;
+  background-color: #eee;
+  overflow: hidden;
+  margin: 0 4px;
+  border-radius: 2px;
+  pointer-events: none;
+}
+
+.bar-inner {
+  height: 100%;
+  pointer-events: none;
+  background-color: #ffc900;
+}
+
+.playback-info {
+  align-items: center;
+  line-height: 20px;
+  justify-content: space-between;
+  padding: 4px;
+  border-bottom: 1px solid hsla(0,0%,100%,.1);
+}
+
+.horizontal.event-tab-radio-buttons {
+  margin: 4px;
+}
+
+.shortcut-info {
+  color: #00d2ff;
+  font-size: .6rem;
+  justify-content: space-around;
+  line-height: 28px;
+}
+
+.event-area {
+  width: 100%;
+  flex: 1 1;
+  display: block;
+  overflow-y: auto;
 }
 
 /* 다른 스타일 요소를 추가할 수 있습니다. */

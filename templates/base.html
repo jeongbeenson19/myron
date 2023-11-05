@@ -7,55 +7,58 @@
         <meta name="robots" content="noindex">
         <link rel="stylesheet" type="text/css" href="{% static "bootstrap.min.css" %}">
         <link rel="stylesheet" type="text/css" href="{% static "style.css" %}">
-        <title>Project:Myron</title>
+        <title>Project: Myron</title>
     </head>
     <body>
-        <div id="root">
-            <div style="width: 100%; height: 100%;">
-                <div style="width: 100%; height: 100%;">
-                    <div class="horizontal expand" style="heigth: 100%;">
-                        <div class="video-column">
-                            <div class="button-load-video-wrapper">
-                                <div class="button-load-video horizontal">
-                                    <i class="icon ion-ios-download-outline">
-                                        불러오기
-                                    </i>
-                                </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-3 custom-bg ">
+                    <div class="button-load-video-wrapper">
+                        <div class="button-load-video horizontal">
+                            <b>날짜 선택</b>
+                        </div>
+                    </div>
+                    <div class="video-timer-wrapper">
+                        <div class="video-timer horizontal">
+                            <div class="label">Video time</div>
+                            <div class="video-time">00:00.000</div>
+                            <div class="button-set-video-time">수정</div>
+                        </div>
+                    </div>
+                    <div class="video-player">
+                        <div class="horizontal toolbar">
+                            <label class="button-myron">
+                                <p>PC 영상</p>
+                                <input type="file" accpet="video/*">
                             </div>
-                            <div class="video-timer-wrapper">
-                                <div class="video-timer horizontal">
-                                    <div class="label">Video time</div>
-                                </div>
+                            <div class="button-myron horizontal center">
+                                <p>새 창에서 보기</p>
                             </div>
-                            <div class="video-player">
-                                <div class="horizontal toolbar">
-                                    <laebl class="button-myron">
-                                        <p>PC 영상</p>
-                                        <input type="file" accept="video/*">
-                                    </laebl>
-                                    <div class="button-myron horizontal center disabled">
-                                        새 창에서 보기
+                        </div>
+                        <div class="video-wrapper" style="align-items: center; justify-content:center; filter: brightness(1) contrast(1) saturate(1) invert(0) hue-rotate(0deg)">
+                            <div style="position: relative; width 100%; cursor: auto;">
+                                <video autoplay></video>
+                            </div>
+                            <div class="horizontal video-controls">
+                                <div class="bar-wrapper expand">
+                                    <div class="bar">
+                                        <div class="bar-inner" style="width: 0%;"></div>
                                     </div>
                                 </div>
-                                <!--비디오 플레이어-->
-                                <div class="video-wrapper" style="align-items: center; justify-content: center;
-                                 filter: brightness(1) contrast(1) saturate(1) invert(0) hue-rotate(0deg);">
-                                </div>
-                                <!--비디오 플레이어 end-->
-                                <div class="playback-info horizontal"></div>
-                                <div class="shortcut-info horizontal"></div>
                             </div>
-                            <div class="horizontal event-tab-radio-buttons"></div>
-                            <div class="event-area"></div>
+                            <div style="position: absolute; top: -60px; left: 50%; transform: translateX(-50%); background-color: rgba(0, 30, 45, 0.57); border-radius: 4px; padding: 8px 12px; pointer-events: none; color: rgb(255, 201, 0); transition: top 0.3s ease 0s;"></div>
+                            <div class="sc-gEvEer sc-eqUAAy coQri fgprtA" style="position: absolute; top: 8px; left: 8px;"></div>
                         </div>
-                        <div class="expand analysis-column" style="overflow-y: auto; padding: 0px 8px;">
-                            <div class="app-toolbar horizontal"></div>
-                            <div class="analyze-toolbar horizontal"></div>
-                            <div class="expand center ground-wrapper horizontal"></div>
-                        </div>     
+                        <div class="playback-info horizontal"></div>
+                        <div class="shortcut-info horizontal"></div>
                     </div>
+                    <div class="horizontal event-tab-radio-buttons"></div>
+                    <div class="event-area"></div>
+                    <!-- 이벤트 콘텐츠 -->
+                </div>
+                <div class="col-md-9 custom-bg ">
+                    <!-- 분석 콘텐츠-->
                 </div>
             </div>
         </div>
     </body>
-</html>
