@@ -5,60 +5,170 @@
         <meta charset="utf-8">
         <meta name="theme-color" content="#000000">
         <meta name="robots" content="noindex">
-        <link rel="stylesheet" type="text/css" href="{% static "bootstrap.min.css" %}">
-        <link rel="stylesheet" type="text/css" href="{% static "style.css" %}">
+        <link rel="stylesheet" type="text/css" href="/static/style.css">
         <title>Project: Myron</title>
     </head>
     <body>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-3 custom-bg ">
-                    <div class="button-load-video-wrapper">
-                        <div class="button-load-video horizontal">
-                            <b>날짜 선택</b>
-                        </div>
-                    </div>
-                    <div class="video-timer-wrapper">
-                        <div class="video-timer horizontal">
-                            <div class="label">Video time</div>
-                            <div class="video-time">00:00.000</div>
-                            <div class="button-set-video-time">수정</div>
-                        </div>
-                    </div>
-                    <div class="video-player">
-                        <div class="horizontal toolbar">
-                            <label class="button-myron">
-                                <p>PC 영상</p>
-                                <input type="file" accpet="video/*">
+        <div id="root">
+            <div style="width: 100%; height: 100%;">
+                <div style="width: 100%; height: 100%;">
+                    <div class="horizontal expand" style="height: 100%">
+                        <div class="video-column">
+                            <div class="button-load-video-wrapper">
+                                <div class="button-load-video horizontal">
+                                    <b>날짜 선택</b>
+                                </div>
                             </div>
-                            <div class="button-myron horizontal center">
-                                <p>새 창에서 보기</p>
-                            </div>
-                        </div>
-                        <div class="video-wrapper" style="align-items: center; justify-content:center; filter: brightness(1) contrast(1) saturate(1) invert(0) hue-rotate(0deg)">
-                            <div style="position: relative; width 100%; cursor: auto;">
-                                <video autoplay></video>
-                            </div>
-                            <div class="horizontal video-controls">
-                                <div class="bar-wrapper expand">
-                                    <div class="bar">
-                                        <div class="bar-inner" style="width: 0%;"></div>
+                            <div class="video-timer-wrapper">
+                                <div class="video-timer horizontal">
+                                    <div class="label">Video time</div>
+                                    <div class="video-time">00:00.000</div>
+                                    <div class="button-set-video-time">
+                                        <i>*</i>
                                     </div>
                                 </div>
                             </div>
-                            <div style="position: absolute; top: -60px; left: 50%; transform: translateX(-50%); background-color: rgba(0, 30, 45, 0.57); border-radius: 4px; padding: 8px 12px; pointer-events: none; color: rgb(255, 201, 0); transition: top 0.3s ease 0s;"></div>
-                            <div class="sc-gEvEer sc-eqUAAy coQri fgprtA" style="position: absolute; top: 8px; left: 8px;"></div>
+                            <div class="video-player">
+                                <div class="horizontal toolbar">
+                                    <label class="toggle-vr button-myron">
+                                        <input type="checkbox">
+                                        <i></i>3D
+                                    </label>
+                                    <button class="button-myron">
+                                        <i></i>서버 영상
+                                    </button>
+                                    <label class="button-myron">
+                                        <i></i>PC 영상
+                                        <input type="file" accept="video/*">
+                                    </label>
+                                </div>
+                                <div class="video-wrapper" style="align-items: center; justify-content:center; filter: brightness(1) contrast(1) saturate(1) invert(0) hue-rotate(0deg)">
+                                    <div style="position: relative; width: 100%; cursor: auto;">
+                                        <video autoplay></video>
+                                    </div>
+                                    <div class="horizontal video-controls">
+                                        <button>
+                                            <i>℗</i>
+                                        </button>
+                                        <div class="bar-wrapper expand">
+                                            <div class="bar">
+                                                <div class="bar-inner" style="width: 0%;"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div style="position: absolute; top: -60px; left: 50%; transform: translateX(-50%); background-color: rgba(0, 30, 45, 0.57); border-radius: 4px; padding: 8px 12px; pointer-events: none; color: rgb(255, 201, 0); transition: top 0.3s ease 0s;"></div>
+                                    <div class="sc-gEvEer sc-eqUAAy coQri fgprtA" style="position: absolute; top: 8px; left: 8px;"></div>
+                                </div>
+                                <div class="playback-info horizontal">
+                                    <div class="group horizontal">
+                                        <div class="label">재생속도</div>
+                                        <div class="value">1.0</div>
+                                    </div>
+                                    <div class="group horizontal">
+                                        <div class="label">싱크</div>
+                                        <div class="value">00:00.000</div>
+                                        <div class="button-edit">*</div>
+                                    </div>
+                                    <div class="group horizontal">
+                                        <div class="label">스킵 간격</div>
+                                        <div class="value">
+                                            "2"
+                                            "sec"
+                                        </div>
+                                        <div class="button-edit">*</div>
+                                    </div>
+                                    <div class="group horizontal">
+                                        <div class="label">+ shift</div>
+                                        <div class="value">
+                                            "10"
+                                            "sec"
+                                        </div>
+                                        <div class="button-edit">*</div>
+                                    </div>
+                                </div>
+                                <div class="shortcut-info horizontal">
+                                    <div>
+                                        <div class="label">재생속도</div>
+                                        <div class="label">이벤트 등록</div>
+                                    </div>
+                                    <div>
+                                        <div class="horizontal">
+                                            <div class="shortcut horizontal">
+                                                <div class="shortcut-item">-</div>
+                                                <div class="shortcut-item">+</div>
+                                            </div>
+                                        </div>
+                                        <div class="horizontal">
+                                            <div class="shortcut">
+                                                <div class="shortcut-item">enter</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="label">스킵</div>
+                                        <div class="label">노드 삭제</div>
+                                    </div>
+                                    <div>
+                                        <div class="horizontal">
+                                            <div class="shortcut horizontal">
+                                                <div class="shortcut-item">←</div>
+                                                <div class="shortcut-item">→</div>
+                                            </div>
+                                        </div>
+                                        <div class="horizontal">
+                                            <div class="shortcut">
+                                                <div class="shortcut-item">esc</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="label">재생</div>
+                                    </div>
+                                    <div>
+                                        <div class="horizontal">
+                                            <div class="shortcut">
+                                                <div class="shortcut-item">spacebar</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="horizontal event-tab-radio-buttons">
+                                <button class="button-myron radio">이벤트</button>
+                                <button class="button-myron radio">포메이션</button>
+                            </div>
+                            <div class="event-area">
+                                <div class="event-timeline" style="height: 100%;"></div>
+                            </div>
+                            <!-- 이벤트 콘텐츠 -->
+                        </div>                        
+                        <div class="expand analysis-column" style="overflow-y: auto; padding: 0px 8px">
+                            <div class="app-toolbar horizontal">
+                                <button class="button-myron">"메모"</button>
+                                <button class="button-myron">"단축키 설정"</button>
+                                <button class="button-myron">"영상 등록"</button>
+                                <button class="button-myron">"분석 완료"</button>
+                                <div class="dropdown-button">
+                                    <button class="button-myron">"MORE"</button>
+                                    <div class="dropdown"></div>
+                                </div>
+                            </div>
+                            <div class>
+                                <div class="analyze-settings"></div>
+                                <div class="team-color-selector horizontal"></div>
+                                <div class="team-selector horizontal" style="margin: 4px 8px;"></div>
+                            </div>
+                            <div class="sub-player-wrapper">
+                                <div class="sub-player horizontal" style="margin: 4px 8px;"></div>
+                            </div>
+                            <div class="expand center ground-wrapper horizontal"></div>
+                            <div class>
+                                <div class="event-form"></div>
+                            </div>
                         </div>
-                        <div class="playback-info horizontal"></div>
-                        <div class="shortcut-info horizontal"></div>
                     </div>
-                    <div class="horizontal event-tab-radio-buttons"></div>
-                    <div class="event-area"></div>
-                    <!-- 이벤트 콘텐츠 -->
-                </div>
-                <div class="col-md-9 custom-bg ">
-                    <!-- 분석 콘텐츠-->
                 </div>
             </div>
         </div>
     </body>
+

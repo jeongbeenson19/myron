@@ -1,15 +1,210 @@
-.horizontal {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+a,button {
+  cursor: pointer;
+  min-height: 20px;
+  line-height: 20px;
+  font-size: .9rem;
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+
+#root,body,html {
+  background-color: #001e2d;
+  height: 100%;
+  font-size: 14px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.flex,div {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+
+.flex.reverse,div.reverse {
+  flex-direction: column-reverse;
+}
+
+.flex.horizontal,div.horizontal {
   flex-direction: row;
 }
 
-.custom-bg {
-  background-color: #001e2d;
-  font-size: 14px;
+.flex.horizontal.reverse,div.horizontal.reverse {
+  flex-direction: row-reverse;
+}
+
+.flex.center,div.center {
+  justify-content: center;
+  align-items: center;
+}
+
+.flex.stretch,div.stretch {
+  align-self: stretch;
+}
+
+.flex.expand,.flex .expand,div.expand,div .expand {
+  flex: 1 1;
+}
+
+.flex.expand-2,.flex .expand-2,div.expand-2,div .expand-2 {
+  flex: 2 1;
+}
+
+.flex.expand-3,.flex .expand-3,div.expand-3,div .expand-3 {
+  flex: 3 1;
+}
+
+.flex.expand-4,.flex .expand-4,div.expand-4,div .expand-4 {
+  flex: 4 1;
+}
+
+.flex.expand-5,.flex .expand-5,div.expand-5,div .expand-5 {
+  flex: 5 1;
+}
+
+.flex.disabled,div.disabled {
+  opacity: .5;
+  pointer-events: none;
+}
+
+.flex.wrap,div.wrap {
+  flex-wrap: wrap;
+}
+
+.flex.align-center,div.align-center {
+  align-items: center;
+}
+
+html {
+  overflow: hidden;
+}
+
+body,html {
+  height: 100%;
+}
+
+body {
+  overflow: auto;
+}
+
+.button-myron {
+  background-color: initial;
+  color: #00d2ff;
+  border: 1px solid #00d2ff;
+  border-radius: 4px;
+}
+
+input {
+  background-color: hsla(0,0%,100%,.1);
+  border: none;
+  border-radius: 4px;
+  height: 28px;
+  text-align: center;
+  color: #fff;
+  min-width: 0;
+}
+
+.video-column>* {
+  width: 400px;
+  flex-shrink: 0;
 }
 
 /* video-cloumn */
 
-.button-load-video-wrapper {
+.video-column .button-load-video-wrapper {
   background-color: hsla(0,0%,100%,.1);
   cursor: pointer;
   position: relative;
@@ -17,20 +212,31 @@
   border-bottom: 1px solid hsla(0,0%,100%,.1);
 }
 
-.button-load-video {
- color: #ffc900;
- line-height: 36px;
- text-align: center;
+.video-column .button-load-video-wrapper>div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
-.video-timer-wrapper {
+.video-column .button-load-video {
+  color: #ffc900;
+  line-height: 36px;
+  justify-content: center;
+}
+
+.video-column .video-timer-wrapper {
   margin-top: 4px;
   padding: 4px;
   background-color: hsla(0,0%,100%,.1);
 }
 
-.video-timer {
+.video-column .video-timer-wrapper .video-timer {
   background-color: #001e2d;
+}
+
+.video-timer {
   position: relative;
   padding-left: 10px;
   width: 100%;
@@ -44,11 +250,11 @@
   color: #ffc900;
 }
 
-video-timer.list div {
+.video-timer * {
   font-size: .9rem;
-} 
+}
 
-.button-set-video-time {
+.video-timer .button-set-video-time {
   width: 40px;
   height: 40px;
   border: none;
@@ -57,32 +263,55 @@ video-timer.list div {
   text-align: center;
 }
 
+.video-timer .button-set-video-time i {
+  font-size: 1.5rem;
+}
+
 .video-player {
   white-space: nowrap;
 }
 
-.toolbar {
+.video-player label {
+  display: flex;
+  flex-direction: row;
+  padding: 0 4px;
+  justify-content: center;
+  align-items: center;
+  font-size: .9rem;
+  line-height: 1.3em;
+}
+
+.video-player label input {
+  display: none;
+}
+
+.video-player .toolbar {
   background-color: #000;
   justify-content: flex-end;
   padding: 2px 4px;
 }
 
-.button-myron {
+.video-player .toolbar .button-myron {
   margin-left: 4px;
   padding: 0 4px;
   cursor: pointer;
-  background-color: initial;
-  color: #00d2ff;
-  border: 1px solid #00d2ff;
-  border-radius: 4px;
 }
 
-.video-wrapper {
-  position: relative;
-  overflow: hidden;
+.video-player .toolbar .toggle-vr input {
+  display: inline;
+  height: auto
+}
+
+.video-player .toolbar .button-myron i {
+  font-size: 1.5rem;
+  margin-right: 8px;
+}
+
+.video-player .video-wrapper {
   width: 100%;
   background-color: #000;
 }
+
 
 .video-controls {
   opacity: 0;
@@ -96,14 +325,22 @@ video-timer.list div {
   background-color: #fefefe;
 }
 
-.bar-wrapper {
+.video-controls button {
+  background: none;
+  border: none;
+  color: #ffc900;
+  margin: 0;
+  padding: 2px 8px;
+}
+
+.video-controls .bar-wrapper {
   align-self: stretch;
   align-items: stretch;
   cursor: pointer;
   justify-content: center;
 }
 
-.bar {
+.video-controls .bar-wrapper .bar {
   height: 4px;
   background-color: #eee;
   overflow: hidden;
@@ -112,13 +349,13 @@ video-timer.list div {
   pointer-events: none;
 }
 
-.bar-inner {
+.video-controls .bar-wrapper .bar .bar-inner {
   height: 100%;
   pointer-events: none;
   background-color: #ffc900;
 }
 
-.playback-info {
+.video-player .playback-info {
   align-items: center;
   line-height: 20px;
   justify-content: space-between;
@@ -126,22 +363,138 @@ video-timer.list div {
   border-bottom: 1px solid hsla(0,0%,100%,.1);
 }
 
-.horizontal.event-tab-radio-buttons {
-  margin: 4px;
+.video-player .playback-info .label {
+  color: #00d2ff;
+  opacity: .7;
+  font-size: .7rem;
+  margin-right: 4px;
 }
 
-.shortcut-info {
+.video-player .playback-info .value {
+  color: #fff;
+  font-size: .8rem;
+}
+
+.video-player .playback-info .button-edit {
+  border: 1px solid #00d2ff;
+  color: #00d2ff;
+  width: 16px;
+  height: 16px;
+  font-size: .8rem;
+  border-radius: 50%;
+  margin: 0 4px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.video-player .shortcut-info {
   color: #00d2ff;
   font-size: .6rem;
   justify-content: space-around;
   line-height: 28px;
 }
 
-.event-area {
+.video-player .shortcut-info .label {
+  align-self: center;
+  opacity: .7;
+}
+
+.video-player .shortcut-info .shortcut-item {
+  border: 1px solid #00d2ff;
+  border-radius: 2px;
+  line-height: 14px;
+  padding: 2px 4px;
+  margin: 4px 2px;
+}
+
+.video-column .event-tab-radio-buttons {
+  margin: 4px;
+}
+
+.video-column .event-tab-radio-buttons button {
+  flex: 1 1;
+  height: 24px;
+}
+
+.button-myron.radio {
+  border-left-width: 0;
+  border-radius: 0;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.button-bepro.radio.active {
+  background-color: hsla(0,0%,100%,.1);
+  color: #ffc900;
+}
+
+.button-bepro.radio:first-child {
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-left-width: 1px;
+}
+
+.button-bepro.radio:last-child {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.video-column .event-area {
   width: 100%;
   flex: 1 1;
   display: block;
   overflow-y: auto;
 }
 
+.video-column .event-area .event-timeline,.video-column .event-area .formation-list {
+  width: 400px;
+}
+
+.analysis-column {
+  position: relative;
+}
+
+.app-toolbar {
+  height: 36px;
+  align-items: center;
+  padding: 0 2px;
+  border-bottom: 1px solid hsla(0,0%,100%,.1)
+}
+
+.app-toolbar .button,.app-toolbar a,.app-toolbar button {
+  cursor: pointer;
+  margin: 0 4px;
+  padding: 0 12px;
+  font-size: .9rem;
+  height: 24px;
+  border: none;
+  display: flex;
+  background-color: #003247
+}
+
+.app-toolbar .dropdown {
+  border-radius: 8px
+}
+
+.app-toolbar .dropdown.dropdown {
+  padding: 0;
+  background-color: #fff
+}
+
+.analyze-settings {
+  margin-top: 5px
+}
+
+.team-color-selector {
+  position: relative
+}
+
+.event-form {
+  background-color: #193746;
+  padding: 4px
+}
+
+.analysis-column .ground-wrapper,.analysis-column .sub-players-wrapper {
+  background-color: #193746
+}
 /* 다른 스타일 요소를 추가할 수 있습니다. */
