@@ -154,16 +154,68 @@
                                 </div>
                             </div>
                             <div class>
-                                <div class="analyze-settings"></div>
-                                <div class="team-color-selector horizontal"></div>
-                                <div class="team-selector horizontal" style="margin: 4px 8px;"></div>
+                                <div class="analyze-settings">
+                                    <div class="horizontal top-menu">
+                                        <button class="button-myron">라인업 관리</button>
+                                        <button class="button-myron">진영 변경</button>
+                                        <button class="button-myron">연장전</button>
+                                        <button class="button-myron">슈팅 선수 위치 입력</button>
+                                    </div>
+                                    <div class="section">
+                                        <div class="horizontal match-time-setting">
+                                            <div class="label horizontal expand">
+                                                영상 시간
+                                                <button class="button-change-match-full-time">0</button>
+                                                분
+                                            </div>
+                                        </div>
+                                        <div class="event-period-selector horizontal" style="align-self: stretch;">
+                                            <button class="button-myron" style="flex: 1 10%;">1st half</button>
+                                            <button class="button-myron" style="flex: 1 10%;">2st half</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="team-color-selector horizontal">
+                                    <div class="color-picker" style="border-bottom-color: rgb(255, 0, 0);"></div>
+                                    <div class="color-picker" style="border-bottom-color: rgb(233, 235, 240);"></div>
+                                </div>
+                                <div class="team-selector horizontal" style="margin: 4px 8px;">
+                                    <button class="button-myron radio">HOME</button>
+                                    <button class="button-myron radio">AWAY</button>
+                                </div>
                             </div>
-                            <div class="sub-player-wrapper">
-                                <div class="sub-player horizontal" style="margin: 4px 8px;"></div>
+                            <div class="sub-players-wrapper">
+                                <div class="sub-players horizontal" style="margin: 4px 8px;">
+                                    <div class="label">교체 선수</div>
+                                    <div class="horizontal players expand"></div>
+                                    <button class="button-myron button-change-formation">포메이션 변경</button>
+                                </div>
                             </div>
-                            <div class="expand center ground-wrapper horizontal"></div>
-                            <div class>
-                                <div class="event-form"></div>
+                            <div class="expand center ground-wrapper horizontal">
+                                <div class="ground center" style="width: 100%; flex: 1 1 0%; position: relative; align-self: stretch;">
+                                    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background-image:
+                                    linear-gradient(90deg, rgb(54, 86, 47) 0%, rgb(54, 86, 47) 5.55556%, rgb(43, 71, 42) 5.55556%,
+                                    rgb(43, 71, 42) 11.1111%, rgb(54, 86, 47) 11.1111%, rgb(54, 86, 47) 16.6667%, rgb(43, 71, 42) 16.6667%,
+                                    rgb(43, 71, 42) 22.2222%, rgb(54, 86, 47) 22.2222%, rgb(54, 86, 47) 27.7778%, rgb(43, 71, 42) 27.7778%,
+                                    rgb(43, 71, 42) 33.3333%, rgb(54, 86, 47) 33.3333%, rgb(54, 86, 47) 38.8889%, rgb(43, 71, 42) 38.8889%,
+                                    rgb(43, 71, 42) 44.4444%, rgb(54, 86, 47) 44.4444%, rgb(54, 86, 47) 50%, rgb(43, 71, 42) 50%,
+                                    rgb(43, 71, 42) 55.5556%, rgb(54, 86, 47) 55.5556%, rgb(54, 86, 47) 61.1111%, rgb(43, 71, 42) 61.1111%,
+                                    rgb(43, 71, 42) 66.6667%, rgb(54, 86, 47) 66.6667%, rgb(54, 86, 47) 72.2222%, rgb(43, 71, 42) 72.2222%,
+                                    rgb(43, 71, 42) 77.7778%, rgb(54, 86, 47) 77.7778%, rgb(54, 86, 47) 83.3333%, rgb(43, 71, 42) 83.3333%,
+                                    rgb(43, 71, 42) 88.8889%, rgb(54, 86, 47) 88.8889%, rgb(54, 86, 47) 94.4444%, rgb(43, 71, 42) 94.4444%,
+                                    rgb(43, 71, 42) 100%)"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="event-form">
+                                    <div class="horizontal input-area-wrapper">
+                                        <input class="raw-input" value="">
+                                        <button class="button-important fill">추가</button>
+                                    </div>
+                                    <div class="event-possession-info-wrapper">
+                                        <div class="horizontal scroll-content"></div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
