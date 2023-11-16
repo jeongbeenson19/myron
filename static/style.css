@@ -180,6 +180,10 @@ body {
   overflow: auto;
 }
 
+button,input,textarea {
+  outline: none
+}
+
 .button-myron {
   background-color: initial;
   color: #00d2ff;
@@ -497,7 +501,7 @@ input {
   margin-top: 5px
 }
 
-.analyze-settings .top-menu .button-bepro {
+.analyze-settings .top-menu .button-myron {
   margin: 4px 2px;
   font-size: .9rem
 }
