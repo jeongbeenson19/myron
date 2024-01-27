@@ -632,4 +632,14 @@ input {
   background-color: #193746
 }
 
+.ground-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ground {
+  flex: 1;
+  position: relative;
+}
 /* 다른 스타일 요소를 추가할 수 있습니다. */
