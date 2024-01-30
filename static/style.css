@@ -79,28 +79,28 @@ time,
 mark,
 audio,
 video {
-  margin: 0;
-  padding: 0;
   border: 0;
   font-size: 100%;
   font: inherit;
+  margin: 0;
+  padding: 0;
   vertical-align: baseline;
 }
 
 a,button {
+  align-items: center;
   cursor: pointer;
-  min-height: 20px;
-  line-height: 20px;
-  font-size: .9rem;
   display: flex;
+  font-size: .9rem;
   justify-content: center;
-  align-items: center
+  line-height: 20px;
+  min-height: 20px;
 }
 
 #root,body,html {
   background-color: #001e2d;
-  height: 100%;
   font-size: 14px;
+  height: 100%;
 }
 
 * {
@@ -108,10 +108,10 @@ a,button {
 }
 
 .flex,div {
+  align-items: stretch;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: stretch;
 }
 
 .flex.reverse,div.reverse {
@@ -127,8 +127,8 @@ a,button {
 }
 
 .flex.center,div.center {
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 }
 
 .flex.stretch,div.stretch {
@@ -186,16 +186,16 @@ button,input,textarea {
 
 .button-myron {
   background-color: initial;
-  color: #00d2ff;
   border: 1px solid #00d2ff;
   border-radius: 4px;
+  color: #00d2ff;
 }
 
 .button-important {
   background-color: initial;
-  color: #ffc900;
   border: 1px solid #ffc900;
-  border-radius: 4px
+  border-radius: 4px;
+  color: #ffc900;
 }
 
 .button-important.fill {
@@ -207,25 +207,25 @@ input {
   background-color: hsla(0,0%,100%,.1);
   border: none;
   border-radius: 4px;
-  height: 28px;
-  text-align: center;
   color: #fff;
+  height: 28px;
   min-width: 0;
+  text-align: center;
 }
 
 .video-column>* {
-  width: 400px;
   flex-shrink: 0;
+  width: 400px;
 }
 
 /* video-cloumn */
 
 .video-column .button-load-video-wrapper {
   background-color: hsla(0,0%,100%,.1);
-  cursor: pointer;
-  position: relative;
-  height: 36px;
   border-bottom: 1px solid hsla(0,0%,100%,.1);
+  cursor: pointer;
+  height: 36px;
+  position: relative;
 }
 
 .video-column .button-load-video-wrapper>div {
