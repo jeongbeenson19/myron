@@ -579,4 +579,34 @@ input {
   flex: 1;
   position: relative;
 }
-/* 다른 스타일 요소를 추가할 수 있습니다. */
+
+.auth-main {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  color: #eeeeee;
+  font-size: 60px;
+}
+
+.desc {
+  color: #eeeeee;
+  font-size: 32px;
+}
+
+.form-group {
+  margin: 8px;
+  width: 200px;
+}
+
+.auth-main .button-important {
+  margin: 8px;
+  width: 100px;
+  color: #001e2d;
+  background-color: #ffc900;
+}
+
