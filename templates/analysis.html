@@ -135,6 +135,12 @@
                         <button class="button-myron">선수 관리</button>
                         <button class="button-myron">메모</button>
                         <button class="button-myron">단축키 설정</button>
+                        {% if user.is_authenticated %}
+                            <form action="{% url 'logout' %}" method="post">
+                                {% csrf_token %}
+                                <button type="submit" class="button-myron">로그아웃</button>
+                            </form>
+                        {% endif %}
                         <div class="dropdown-button">
                             <button class="button-myron">MORE</button>
                             <div class="dropdown"></div>
