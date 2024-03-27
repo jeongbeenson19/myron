@@ -6,7 +6,7 @@
             <div class="horizontal expand" style="height: 100%">
                 <div class="video-column" style="margin-left: 4px">
                     <div class="button-load-video-wrapper">
-                        <div class="button-load-video horizontal">
+                        <div id="open-popup" class="button-load-video horizontal">
                             <b>날짜 선택</b>
                         </div>
                     </div>
@@ -96,10 +96,10 @@
                     </div>
                     <div class="event-tab-radio-buttons horizontal" style="margin: 4px 8px;">
                             <div class="player horizontal">
-                                <button class="button-myron radio">Home</button>
+                                <button class="button-myron radio">이벤트</button>
                             </div>
                             <div class="player horizontal">
-                                <button class="button-myron radio">Away</button>
+                                <button class="button-myron radio">포메이션</button>
                             </div>
                         </div>
                     <div class="event-area">
@@ -123,7 +123,7 @@
                             <div class="dropdown"></div>
                         </div>
                     </div>
-                    <div class>
+                    <div>
                         <div class="player-selector horizontal" style="margin: 4px 8px;">
                             <div class="player horizontal">
                                 <button class="button-myron radio">Home</button>
@@ -134,6 +134,24 @@
                         </div>
                     </div>
                     <div class="expand center video-player horizontal">
+                        <div id="load-video-popup" style="display: none;">
+                            <div class="popup-content">
+                                <form id="upload-form">
+                                    <div class="form-group">
+                                        <label for="video-upload">비디오 업로드</label>
+                                        <input type="file" class="form-control-file" id="video-upload">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="datepicker">날짜 선택</label>
+                                        <input type="text" class="form-control" id="datepicker">
+                                    </div>
+                                    <div class="button-group horizontal">
+                                        <button type="button" class="button-myron" id="submit-button">저장</button>
+                                        <button type="button" class="button-myron" id="close-popup">닫기</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
                     </div>
                     <div>
                         <div class="event-form">
@@ -151,4 +169,18 @@
         </div>
     </div>
 </div>
+{% endblock %}
+{% block script %}
+<script>
+// JavaScript
+document.addEventListener('DOMContentLoaded', function () {
+    document.getElementById('open-popup').addEventListener('click', function () {
+        document.getElementById('load-video-popup').style.display = 'block';
+    });
+
+    document.getElementById('close-popup').addEventListener('click', function () {
+        document.getElementById('load-video-popup').style.display = 'none';
+    });
+});
+</script>
 {% endblock %}
