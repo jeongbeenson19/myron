@@ -19,35 +19,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="video-player">
-                        <div class="horizontal toolbar">
-                            <label class="toggle-vr button-myron">
-                                <input type="checkbox">
-                                <i></i>3D
-                            </label>
-                            <button class="button-myron">
-                                <i></i>서버 영상
-                            </button>
-                            <label class="button-myron">
-                                <i></i>PC 영상
-                                <input type="file" accept="video/*">
-                            </label>
-                        </div>
-                        <div class="video-wrapper" style="align-items: center; justify-content:center; filter: brightness(1) contrast(1) saturate(1) invert(0) hue-rotate(0deg)">
-                            <div style="position: relative; width: 100%; cursor: auto;">
-                                <video autoplay></video>
-                            </div>
-                            <div class="horizontal video-controls">
-                                <button>
-                                    <i>℗</i>
-                                </button>
-                                <div class="bar-wrapper expand">
-                                    <div class="bar">
-                                        <div class="bar-inner" style="width: 0%;"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="video-player-toolbar">
                         <div class="playback-info horizontal">
                             <div class="group horizontal">
                                 <div class="label">재생속도</div>
@@ -122,9 +94,14 @@
                             </div>
                         </div>
                     </div>
-                    <div class="horizontal event-tab-radio-buttons">
-                        <button class="button-myron">이벤트</button>
-                    </div>
+                    <div class="event-tab-radio-buttons horizontal" style="margin: 4px 8px;">
+                            <div class="player horizontal">
+                                <button class="button-myron radio">Home</button>
+                            </div>
+                            <div class="player horizontal">
+                                <button class="button-myron radio">Away</button>
+                            </div>
+                        </div>
                     <div class="event-area">
                         <div class="event-timeline" style="height: 100%;"></div>
                     </div>
@@ -149,16 +126,14 @@
                     <div class>
                         <div class="player-selector horizontal" style="margin: 4px 8px;">
                             <div class="player horizontal">
-                                <button class="button-myron radio">Player 1</button>
+                                <button class="button-myron radio">Home</button>
                             </div>
                             <div class="player horizontal">
-                                <button class="button-myron radio">Player 2</button>
+                                <button class="button-myron radio">Away</button>
                             </div>
                         </div>
                     </div>
-                    <div class="expand center ground-wrapper horizontal">
-                        <div class="ground center">
-                        </div>
+                    <div class="expand center video-player horizontal">
                     </div>
                     <div>
                         <div class="event-form">

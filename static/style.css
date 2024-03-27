@@ -283,11 +283,11 @@ input {
   font-size: 1.5rem;
 }
 
-.video-player {
+.video-player-toolbar {
   white-space: nowrap;
 }
 
-.video-player label {
+.video-player-toolbar label {
   display: flex;
   flex-direction: row;
   padding: 0 4px;
@@ -297,33 +297,34 @@ input {
   line-height: 1.3em;
 }
 
-.video-player label input {
+.video-player-toolbar label input {
   display: none;
 }
 
-.video-player .toolbar {
+.video-player-toolbar .toolbar {
   background-color: #000;
   justify-content: flex-end;
   padding: 2px 4px;
 }
 
-.video-player .toolbar .button-myron {
+.video-player-toolbar .toolbar .button-myron {
   margin-left: 4px;
   padding: 0 4px;
   cursor: pointer;
 }
 
-.video-player .toolbar .toggle-vr input {
+.video-player-toolbar.toolbar .toggle-vr input {
   display: inline;
   height: auto
 }
 
-.video-player .toolbar .button-myron i {
+.video-player-toolbar .toolbar .button-myron i {
   font-size: 1.5rem;
   margin-right: 8px;
 }
 
-.video-player .video-wrapper {
+
+.video-player {
   width: 100%;
   background-color: #000;
 }
@@ -371,7 +372,7 @@ input {
   background-color: #ffc900;
 }
 
-.video-player .playback-info {
+.video-player-toolbar .playback-info {
   align-items: center;
   line-height: 20px;
   justify-content: space-between;
@@ -379,19 +380,19 @@ input {
   border-bottom: 1px solid hsla(0,0%,100%,.1);
 }
 
-.video-player .playback-info .label {
+.video-player-toolbar .playback-info .label {
   color: #00d2ff;
   opacity: .7;
   font-size: .7rem;
   margin-right: 4px;
 }
 
-.video-player .playback-info .value {
+.video-player-toolbar .playback-info .value {
   color: #fff;
   font-size: .8rem;
 }
 
-.video-player .playback-info .button-edit {
+.video-player-toolbar .playback-info .button-edit {
   border: 1px solid #00d2ff;
   color: #00d2ff;
   width: 16px;
@@ -403,19 +404,19 @@ input {
   cursor: pointer;
 }
 
-.video-player .shortcut-info {
+.video-player-toolbar .shortcut-info {
   color: #00d2ff;
   font-size: .6rem;
   justify-content: space-around;
   line-height: 28px;
 }
 
-.video-player .shortcut-info .label {
+.video-player-toolbar .shortcut-info .label {
   align-self: center;
   opacity: .7;
 }
 
-.video-player .shortcut-info .shortcut-item {
+.video-player-toolbar .shortcut-info .shortcut-item {
   border: 1px solid #00d2ff;
   border-radius: 2px;
   line-height: 14px;
@@ -456,7 +457,7 @@ input {
   border-bottom-right-radius: 4px;
 }
 
-.player .button-myron.radio:focus {
+.button-myron.radio:focus {
   border: 1px solid #ffc900;
   color: #ffc900;
   background-color: hsla(0,0%,100%,.1);
